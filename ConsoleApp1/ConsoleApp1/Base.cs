@@ -1,11 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DqLib;
-using OpenQA.Selenium.Interactions;
 using NUnit.Framework;
 
 namespace ConsoleApp1
@@ -28,9 +23,7 @@ namespace ConsoleApp1
 
             Console.WriteLine("Email Id Entered");
 
-            Actions action = new Actions(Driver);
-
-            action.KeyDown(Keys.Tab)
+            actionProvider.KeyDown(Keys.Tab)
                   .KeyUp(Keys.Tab)
                   .Build()
                   .Perform();

@@ -13,6 +13,7 @@ namespace ExcelDataTesting
     // 3. Right Click on XML File -> Include
     // 4. Again Right Click on XML File -> Properties
     // Change "Do Not Copy" to "Copy Always"
+
     [TestClass]
     public class UnitTest1
     {
@@ -21,7 +22,7 @@ namespace ExcelDataTesting
 
         public TestContext TestContext { get; set; }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "@|DataDirectory|XMLData.xml", "user", DataAccessMethod.Sequential)]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML", "|DataDirectory|\\XMLData.xml", "user", DataAccessMethod.Sequential)]
         [TestMethod]
         public void ExcelData()
         {

@@ -8,9 +8,11 @@ using System.Threading;
 
 namespace ExcelDataTesting
 {
-    // 1. Put Excel File under the project solution
+    // 1. Put XML File under the project solution
     // 2. Click on Show All Files
-    // 3. Right Click on Excel -> Include
+    // 3. Right Click on XML File -> Include
+    // 4. Again Right Click on XML File -> Properties
+    // Change "Do Not Copy" to "Copy Always"
     [TestClass]
     public class UnitTest1
     {

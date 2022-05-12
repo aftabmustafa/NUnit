@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OfficeOpenXml;
 using OpenQA.Selenium;
@@ -10,6 +9,11 @@ using System.Threading;
 namespace ExcelDataTesting
 {
     // 1. Put Excel File under the project solution
+    // 2. Click on Show All Files
+    // 3. Right Click on Excel File -> Include
+    // 4. Again Right Click on Excel File -> Properties
+    // Change "Do Not Copy" to "Copy Always"
+
     [TestClass]
     public class UnitTest1
     {

@@ -109,8 +109,8 @@ namespace DemoQA
         [Test, Order(2)]
         public void CheckBoxTest()
         {
-            Test = null;
-            Test = Extent.CreateTest("CheckBox").Info("CheckBoxTesting");
+            //Test = null;
+            //Test = Extent.CreateTest("CheckBox").Info("CheckBoxTesting");
 
             try
             {

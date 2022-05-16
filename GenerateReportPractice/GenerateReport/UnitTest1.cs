@@ -38,7 +38,7 @@ namespace GenerateReport
         {
             Extent = new ExtentReports();
 
-            var HtmlReporter = new ExtentHtmlReporter(@"E:\ReportsResults\Report" + DateTime.Now.ToString("_MMddyyyy_hhmmtt") + ".html");
+            var HtmlReporter = new ExtentHtmlReporter(@"E:\ReportsResults\Report\" + DateTime.Now.ToString("_MMddyyyy_hhmmtt") + ".html");
 
             Extent.AttachReporter(HtmlReporter);
         }

@@ -12,6 +12,9 @@ namespace ReportGeneration_2
 {
     public class Home
     {
+        // Driver
+        IWebDriver driver;
+
         public Home()
         {
             driver = null;
@@ -21,9 +24,6 @@ namespace ReportGeneration_2
         {
             driver = WebDriver;
         }
-
-        // Driver
-        IWebDriver driver;
 
         // Locator
         [FindsBy(How = How.XPath, Using = "//ul[@class='top-menu notmobile']//a[@href='/computers']")]

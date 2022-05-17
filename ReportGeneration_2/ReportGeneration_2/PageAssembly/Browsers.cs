@@ -9,7 +9,8 @@ using System.Configuration;
 
 namespace ReportGeneration_2
 {
-    public class Browsers
+    //public class Browsers
+    class Browsers
     {
         private IWebDriver driver;
         private string baseURL;

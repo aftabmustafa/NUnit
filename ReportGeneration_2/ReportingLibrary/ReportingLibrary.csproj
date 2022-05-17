@@ -426,7 +426,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExtentReportHelpers.cs" />
+    <Compile Include="ExtentReportHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,13 +1,8 @@
-﻿using System;
-using System.IO;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Support.UI;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NUnit.Framework;
-using AventStack.ExtentReports.Reporter;
-using AventStack.ExtentReports;
-using ReportGeneration_2;
+using NUnit.Framework.Interfaces;
+using ReportingLibrary;
+using SeleniumHelperLibrary;
 
 namespace ReportGeneration_2
 {
@@ -16,7 +11,12 @@ namespace ReportGeneration_2
     {
         protected Browsers browser;
         protected Pages pages;
+        protected ExtentReportsHelper extent;
 
+        public void SetUpReporter()
+        {
+            extent = new ExtentReportsHelper();
+        }
 
         [SetUp]
         public void StartUpTest()

@@ -8,7 +8,8 @@ using SeleniumExtras.PageObjects;
 
 namespace ReportGeneration_2
 {
-    public class Pages
+    //public class Pages
+    class Pages
     {
         Browsers _browser { get; }
        

@@ -9,18 +9,18 @@ using System.Configuration;
 
 namespace ReportGeneration_2
 {
-    class Browsers
+    public class Browsers
     {
+        private IWebDriver driver;
+        private string baseURL;
+        private string browser;
+
         public Browsers()
         {
             baseURL = ConfigurationManager.AppSettings["url"];
 
             browser = ConfigurationManager.AppSettings["browser"];
         }
-
-        private IWebDriver driver;
-        private string baseURL;
-        private string browser;
 
         public void Init()
         {

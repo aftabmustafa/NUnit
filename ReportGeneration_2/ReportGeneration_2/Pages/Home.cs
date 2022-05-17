@@ -10,7 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ReportGeneration_2
 {
-    class Home
+    public class Home
     {
         public Home()
         {

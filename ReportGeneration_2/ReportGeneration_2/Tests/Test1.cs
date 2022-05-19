@@ -10,7 +10,7 @@ namespace ReportGeneration_2
     [TestFixture]
     class Test1 : TestBase
     {
-        //Pages Pages;
+        public Pages Pages;
 
         [Test]
         public void nopCommerceDummyTest()

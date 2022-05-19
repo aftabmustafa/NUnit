@@ -1,10 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Reflection;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using AventStack.ExtentReports;
 using AventStack.ExtentReports.Reporter;
 
@@ -13,13 +9,13 @@ namespace ReportingLibrary
     public class ExtentReportsHelper
     {
         public ExtentReports extent { get; set; }
-        public ExtentV3HtmlReporter reporter { get; set; }
+        public ExtentHtmlReporter reporter { get; set; }
         public ExtentTest test { get; set; }
 
         public ExtentReportsHelper()
         {
             extent = new ExtentReports();
-            reporter = new ExtentV3HtmlReporter(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "ExtentReports.html"));
+            reporter = new ExtentHtmlReporter(Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "ExtentReports.html"));
 
             reporter.Config.DocumentTitle = "Automation Testing Report";
 

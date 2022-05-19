@@ -1,21 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ReportGeneration_2;
+using ReportingLibrary;
 using SeleniumExtras.PageObjects;
 
-namespace ReportGeneration_2
+namespace Test
 {
-    //public class Pages
-    class Pages
+    public class Pages
     {
         Browsers _browser { get; }
-       
-        public Pages(Browsers browser)
+
+        ExtentReportsHelper _extentReportsHelper { get; set; }
+
+        public Pages(Browsers browser, ExtentReportsHelper extentReportsHelper)
         {
             _browser = browser;
+            _extentReportsHelper = extentReportsHelper;
         }
 
         private T GetPages<T>() where T : new()

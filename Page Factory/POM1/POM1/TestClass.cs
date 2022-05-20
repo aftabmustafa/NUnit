@@ -1,16 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using POM1.PageObjects;
-using SeleniumExtras.PageObjects;
+using System.Configuration;
 
 namespace POM1
 {
+    // We can store connection string in app config
+    // We can store target URL in app config
+    // We can store different types of credentials in app config
+    // app config can be internal or external
+
+
     public class TestClass
     {
         private IWebDriver driver;
@@ -25,7 +26,9 @@ namespace POM1
         [Test]
         public void Test1()
         {
-            driver.Url = "https://demoqa.com/text-box";
+            //driver.Url = "https://demoqa.com/text-box";
+
+            driver.Url = ConfigurationManager.AppSettings["URL1"];
 
             var TextBox = new TextBoxPage(driver);
 
@@ -43,11 +46,13 @@ namespace POM1
         [Test]
         public void Test2()
         {
-            driver.Url = "https://demoqa.com/login";
+            //driver.Url = "https://demoqa.com/login";
+
+            driver.Url = ConfigurationManager.AppSettings["URL2"];
 
             var Login = new LoginPage(driver);
 
-            Login.LogIntoApplication();
+            Login.LogIntoApplication("LoginTest");
 
             //PageFactory.InitElements(driver, Login);
 

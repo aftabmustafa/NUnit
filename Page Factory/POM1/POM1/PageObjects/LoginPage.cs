@@ -1,11 +1,7 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support;
 using SeleniumExtras.PageObjects;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using POM1.DataAccess;
 
 namespace POM1.PageObjects
 {
@@ -32,10 +28,16 @@ namespace POM1.PageObjects
             PageFactory.InitElements(driver, this);
         }
 
-        public void LogIntoApplication()
+        public void LogIntoApplication(string TestName)
         {
-            Username.SendKeys("aria");
-            Password.SendKeys("@riaLabel2022");
+            //Username.SendKeys("aria");
+            //Password.SendKeys("@riaLabel2022");
+
+            var UserData = ExcelDataAccess.GetTestData(TestName);
+
+            Username.SendKeys(UserData.username);
+            Password.SendKeys(UserData.password);
+
             SubmitButton.Click();
         }
     }

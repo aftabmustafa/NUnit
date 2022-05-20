@@ -1,13 +1,23 @@
 # NUnit
 
-Console App1: Testing with Custom Library
+Actions Excel: Test Script before Automation Testing
 
-Console App2: Testing with Conventional Method
+CSVTesting: NUnit Testing using .csv file
+
+Console App1: NUnit Testing with Custom Library
+
+Console App2: NUnit Testing with Conventional Method
+
+ExcelDataTesting: NUnit Testing using Excel file
+
+GenerateReport(Different Websites): Applying the concept of Report Generation on Different Websites such as DemoQA, AutomationPractice, etc
+
+GenerateReportPractice: Report Generation Practice
+
+Page Factory: NUnit project using SeleniumExtras.PageObjects
+
+ReportGeneration_2: Custom Report Generation Dashboard with Full Control(NOT WORKING)!!!
 
 UnitTestProject1: NUnit Assert
 
-GenerateReportPractice: Report Generation Code of Live Training
-
-GenerateReport(Different Websites): Applying the concept of Report Generation on Different Websites such DemoQA, AutomationPractice, etc
-
-ReportGeneration_2: Custom Report Generation Dashboard with Full Control
+XMLTesting: NUnit Testing using XML file

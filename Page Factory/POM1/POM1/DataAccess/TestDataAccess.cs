@@ -16,7 +16,9 @@ namespace POM1.DataAccess
         {
             var FileName = ConfigurationManager.AppSettings["TestDataSheetPath"];
 
-            var Connection = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source={0}; Extended Property='Excel 12.0; HDR=YES'", FileName);
+            // MS Office Version: 2016
+            // Right Click on Project -> Properties -> Build -> Platfrom Target -> x64
+            var Connection = String.Format(@"Provider=Microsoft.ACE.OLEDB.12.0; Data Source={0}; Extended Properties=""Excel 12.0 Xml;HDR=YES""", FileName);
 
             return Connection;
         }

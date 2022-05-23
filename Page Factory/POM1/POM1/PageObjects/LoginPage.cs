@@ -9,6 +9,13 @@ namespace POM1.PageObjects
     {
         private IWebDriver driver;
 
+        public LoginPage(IWebDriver driver)
+        {
+            this.driver = driver;
+
+            PageFactory.InitElements(driver, this);
+        }
+
         [FindsBy(How = How.Id, Using = "userName")]
         [CacheLookup]
         private IWebElement Username { get; set; }
@@ -20,13 +27,6 @@ namespace POM1.PageObjects
         [FindsBy(How = How.Id, Using = "login")]
         [CacheLookup]
         private IWebElement SubmitButton { get; set; }
-
-        public LoginPage(IWebDriver driver)
-        {
-            this.driver = driver;
-
-            PageFactory.InitElements(driver, this);
-        }
 
         public void LogIntoApplication(string TestName)
         {

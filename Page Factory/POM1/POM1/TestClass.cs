@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using POM1.PageObjects;
 using System.Configuration;
+using POM1.WrapperFactory;
 
 namespace POM1
 {
@@ -27,8 +28,11 @@ namespace POM1
         public void Test1()
         {
             //driver.Url = "https://demoqa.com/text-box";
+            //driver.Url = ConfigurationManager.AppSettings["URL1"];
 
-            driver.Url = ConfigurationManager.AppSettings["URL1"];
+            BrowserFactory.initBrowser("Firefox");
+
+            BrowserFactory.loadApplication(ConfigurationManager.AppSettings["URL1"]);
 
             var TextBox = new TextBoxPage(driver);
 
